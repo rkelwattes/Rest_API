@@ -14,6 +14,7 @@ namespace WebApplication1.Data
         {
         }
 
-        public DbSet<WebApplication1.Models.TodoItem> TodoItem { get; set; }
+        public DbSet<TodoItem> TodoItem { get; set; }
+        public DbSet<User> UserDetails { get; set; }
     }
 }

@@ -26,8 +26,12 @@ namespace WebApplication1
             opt.UseInMemoryDatabase("TodoList"));
             services.AddControllers();
 
+            services.AddDbContext<UserContext>(opt =>
+            opt.UseInMemoryDatabase("TodoList"));
+            services.AddControllers();
+
             //services.AddDbContext<WebApplication1Context>(options =>
-              //      options.UseSqlServer(Configuration.GetConnectionString("WebApplication1Context")));
+            //      options.UseSqlServer(Configuration.GetConnectionString("WebApplication1Context")));
             /*services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplication1", Version = "v1" });
